@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{16D9E2AD-17E8-4369-9164-001B8C0E8AD4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Smartdocs</RootNamespace>
+    <AssemblyName>Smartdocs</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile78</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Models\DocDataModel.cs" />
+    <Compile Include="Models\HeaderModel.cs" />
+    <Compile Include="Models\WorkFlowFieldModel.cs" />
+    <Compile Include="Models\AttachmentModel.cs" />
+    <Compile Include="Models\LogModel.cs" />
+    <Compile Include="Models\WorkItemModel.cs" />
+    <Compile Include="Network\HttpHandler.cs" />
+    <Compile Include="View\SmartTaskList.cs" />
+    <Compile Include="View\WorkItemListPage.cs" />
+    <Compile Include="View\LogsPage.cs" />
+    <Compile Include="BarCodeScannerService.cs" />
+    <Compile Include="View\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\HomePage.xaml.cs">
+      <DependentUpon>HomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Smartdocs.xaml.cs">
+      <DependentUpon>Smartdocs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\RootPage.xaml.cs">
+      <DependentUpon>RootPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\MasterPageItem.cs" />
+    <Compile Include="View\MasterMenuPage.xaml.cs">
+      <DependentUpon>MasterMenuPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\InboxViewModel.cs" />
+    <Compile Include="Pages\Inbox\InboxPage.xaml.cs">
+      <DependentUpon>InboxPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Inbox\InboxItemTemplate.xaml.cs">
+      <DependentUpon>InboxItemTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Outbox\OutboxPage.xaml.cs">
+      <DependentUpon>OutboxPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Requests\RequestPage.xaml.cs">
+      <DependentUpon>RequestPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\SettingPage.xaml.cs">
+      <DependentUpon>SettingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\_Partials\MainHeader.xaml.cs">
+      <DependentUpon>MainHeader.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\InvoiceModel.cs" />
+    <Compile Include="Pages\Invoice\InvoicePage.xaml.cs">
+      <DependentUpon>InvoicePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Invoice\InvoiceItemTemplate.xaml.cs">
+      <DependentUpon>InvoiceItemTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MaterialMaster\MaterialMaster.xaml.cs">
+      <DependentUpon>MaterialMaster.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PurchaseRequest\PurchaseRequest.xaml.cs">
+      <DependentUpon>PurchaseRequest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PurchaseOrder\PurchaseOrder.xaml.cs">
+      <DependentUpon>PurchaseOrder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Invoice\InvoiceDetail\Custom\CarouselLayout.cs" />
+    <Compile Include="Pages\Invoice\InvoiceDetail\ViewModel\BaseViewModel.cs" />
+    <Compile Include="Pages\Invoice\InvoiceDetail\ViewModel\SwitcherPageViewModel.cs" />
+    <Compile Include="Pages\Invoice\InvoiceDetail\SubViews\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Invoice\InvoiceDetail\SubViews\LinesView.xaml.cs">
+      <DependentUpon>LinesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Invoice\InvoiceDetail\SubViews\FilesView.xaml.cs">
+      <DependentUpon>FilesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Invoice\InvoiceDetail\SubViews\LogsView.xaml.cs">
+      <DependentUpon>LogsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Invoice\InvoiceDetail\ViewModel\ICarouselViewModel.cs" />
+    <Compile Include="Pages\Invoice\InvoiceDetail\Helper\HomeView.cs" />
+    <Compile Include="Pages\Invoice\InvoiceDetail\ViewModel\FileViewModel.cs" />
+    <Compile Include="Pages\Invoice\InvoiceDetail\ViewModel\LinesViewModel.cs" />
+    <Compile Include="Pages\Invoice\InvoiceDetail\ViewModel\LogsViewModel.cs" />
+    <Compile Include="Pages\Invoice\InvoiceDetail\ViewModel\MainViewModel.cs" />
+    <Compile Include="Pages\Invoice\InvoiceDetail\ViewModel\TabbedPageViewModel.cs" />
+    <Compile Include="Pages\Invoice\InvoiceDetail\Helper\DynamicTemplateLayout.cs" />
+    <Compile Include="Pages\Invoice\InvoiceDetail\Helper\PagerIndicatorTabs.cs" />
+    <Compile Include="Pages\Invoice\InvoiceDetail\InvoiceDetailPage.cs" />
+    <Compile Include="Pages\Invoice\InvoiceDetail\Helper\LinesViewItem.xaml.cs">
+      <DependentUpon>LinesViewItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Invoice\InvoiceDetail\SubViews\LinesViewItemTemplate.xaml.cs">
+      <DependentUpon>LinesViewItemTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RequestsNew\NewInvoice.cs" />
+    <Compile Include="Pages\RequestsNew\Custom\CarouselLayout.cs" />
+    <Compile Include="Pages\RequestsNew\Helper\PagerIndicatorTabs.cs" />
+    <Compile Include="Pages\RequestsNew\ViewModel\TabbedPageViewModel.cs" />
+    <Compile Include="Pages\RequestsNew\ViewModel\BaseViewModel.cs" />
+    <Compile Include="Pages\RequestsNew\ViewModel\MainViewModel.cs" />
+    <Compile Include="Pages\RequestsNew\ViewModel\FileViewModel.cs" />
+    <Compile Include="Pages\RequestsNew\ViewModel\SwitcherPageViewModel.cs" />
+    <Compile Include="Pages\RequestsNew\Subview\NewInvoiceMain.xaml.cs">
+      <DependentUpon>NewInvoiceMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RequestsNew\Subview\NewInvoiceFiles.xaml.cs">
+      <DependentUpon>NewInvoiceFiles.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ProofOfDelivery\ProofOfDeliveryPage.xaml.cs">
+      <DependentUpon>ProofOfDeliveryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Invoice\InvoiceDetail\ViewModel\SignatureModel.cs" />
+    <Compile Include="Pages\Invoice\InvoiceDetail\SubViews\SignatureView.xaml.cs">
+      <DependentUpon>SignatureView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Invoice\InvoiceDetail\Custom\SignaturePad.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="..\packages\Xamarin.Forms.1.5.1.6471\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.5.1.6471\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
+  <ItemGroup>
+    <Reference Include="System.Net.Http">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\portable-net45+wp80+win8+wpa81+dnxcore50\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core">
+      <HintPath>..\packages\Xamarin.Forms.1.5.1.6471\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml">
+      <HintPath>..\packages\Xamarin.Forms.1.5.1.6471\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform">
+      <HintPath>..\packages\Xamarin.Forms.1.5.1.6471\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Acr.XamForms.SignaturePad">
+      <HintPath>..\packages\SignaturePad.Xamarin.Forms.PCL.1.0.0.1\lib\portable-win+net45+wp80+windows8+wpa+MonoAndroid10+MonoTouch10\Acr.XamForms.SignaturePad.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="assets\Icon-120.png" />
+    <None Include="assets\Icon-152.png" />
+    <None Include="assets\Icon-16.png" />
+    <None Include="assets\Icon-24.png" />
+    <None Include="assets\Icon-32.png" />
+    <None Include="assets\Icon-40.png" />
+    <None Include="assets\Icon-40%402x.png" />
+    <None Include="assets\Icon-60.png" />
+    <None Include="assets\Icon-60%402x.png" />
+    <None Include="assets\Icon-60%403x.png" />
+    <None Include="assets\Icon-64.png" />
+    <None Include="assets\Icon-72.png" />
+    <None Include="assets\Icon-72%402x.png" />
+    <None Include="assets\Icon-76.png" />
+    <None Include="assets\Icon-76%402x.png" />
+    <None Include="assets\Icon-Amazon.png" />
+    <None Include="assets\Icon-Small-40.png" />
+    <None Include="assets\Icon-Small-40%402x.png" />
+    <None Include="assets\Icon-Small-40%403x.png" />
+    <None Include="assets\Icon-Small-50.png" />
+    <None Include="assets\Icon-Small-50%402x.png" />
+    <None Include="assets\Icon-Small.png" />
+    <None Include="assets\Icon-Small%402x.png" />
+    <None Include="assets\Icon-Small%403x.png" />
+    <None Include="assets\Icon-hdpi.png" />
+    <None Include="assets\Icon-ldpi.png" />
+    <None Include="assets\Icon-mdpi.png" />
+    <None Include="assets\Icon-xhdpi.png" />
+    <None Include="assets\Icon-xxhdpi.png" />
+    <None Include="assets\Icon-xxxhdpi.png" />
+    <None Include="assets\Icon.png" />
+    <None Include="assets\Icon%402x.png" />
+    <None Include="assets\iTunesArtwork.png" />
+    <None Include="assets\iTunesArtwork%402x.png" />
+    <None Include="assets\upload.png" />
+    <None Include="Info.plist" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Network\" />
+    <Folder Include="View\" />
+    <Folder Include="Pages\" />
+    <Folder Include="ViewModel\" />
+    <Folder Include="Pages\Inbox\" />
+    <Folder Include="Pages\Outbox\" />
+    <Folder Include="Pages\Requests\" />
+    <Folder Include="Pages\Setting\" />
+    <Folder Include="Pages\_Partials\" />
+    <Folder Include="Pages\Invoice\" />
+    <Folder Include="Pages\PurchaseOrder\" />
+    <Folder Include="Pages\PurchaseRequest\" />
+    <Folder Include="Pages\MaterialMaster\" />
+    <Folder Include="Pages\Invoice\InvoiceDetail\" />
+    <Folder Include="Pages\Invoice\InvoiceDetail\Custom\" />
+    <Folder Include="Pages\Invoice\InvoiceDetail\ViewModel\" />
+    <Folder Include="Pages\Invoice\InvoiceDetail\SubViews\" />
+    <Folder Include="Pages\Invoice\InvoiceDetail\Helper\" />
+    <Folder Include="Pages\RequestsNew\" />
+    <Folder Include="Pages\RequestsNew\Custom\" />
+    <Folder Include="Pages\RequestsNew\Helper\" />
+    <Folder Include="Pages\RequestsNew\ViewModel\" />
+    <Folder Include="Pages\RequestsNew\Subview\" />
+    <Folder Include="Pages\ProofOfDelivery\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="View\Login.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\HomePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Smartdocs.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\RootPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MasterMenuPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Inbox\InboxPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Inbox\InboxItemTemplate.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Outbox\OutboxPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Requests\RequestPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Setting\SettingPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\_Partials\MainHeader.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Invoice\InvoicePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Invoice\InvoiceItemTemplate.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\MaterialMaster\MaterialMaster.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\PurchaseRequest\PurchaseRequest.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\PurchaseOrder\PurchaseOrder.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Invoice\InvoiceDetail\SubViews\MainView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Invoice\InvoiceDetail\SubViews\LinesView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Invoice\InvoiceDetail\SubViews\FilesView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Invoice\InvoiceDetail\SubViews\LogsView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Invoice\InvoiceDetail\Helper\LinesViewItem.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Invoice\InvoiceDetail\SubViews\LinesViewItemTemplate.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\RequestsNew\Subview\NewInvoiceMain.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\RequestsNew\Subview\NewInvoiceFiles.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ProofOfDelivery\ProofOfDeliveryPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Invoice\InvoiceDetail\SubViews\SignatureView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

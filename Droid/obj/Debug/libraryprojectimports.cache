@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Paths>
+  <Jars></Jars>
+  <ResolvedResourceDirectories>
+    <ResolvedResourceDirectory>/Users/admin/Documents/work/Xamarin/smartdocs/Droid/obj/Debug/__library_projects__/Xamarin.Forms.Platform.Android/library_project_imports/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/admin/Documents/work/Xamarin/smartdocs/Droid/obj/Debug/__library_projects__/ZXingNetMobile/library_project_imports/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/admin/Documents/work/Xamarin/smartdocs/Droid/obj/Debug/__library_projects__/SignaturePad.Android/library_project_imports/res</ResolvedResourceDirectory>
+  </ResolvedResourceDirectories>
+  <ResolvedAssetDirectories>
+    <ResolvedAssetDirectory>obj/Debug/__library_projects__/Xamarin.Forms.Platform.Android/library_project_imports/assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj/Debug/__library_projects__/ZXingNetMobile/library_project_imports/assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj/Debug/__library_projects__/SignaturePad.Android/library_project_imports/assets</ResolvedAssetDirectory>
+  </ResolvedAssetDirectories>
+  <ResolvedEnvironmentFiles />
+  <ResolvedResourceDirectoryStamps>
+    <ResolvedResourceDirectoryStamp>/Users/admin/Documents/work/Xamarin/smartdocs/Droid/obj/Debug/__library_projects__/Xamarin.Forms.Platform.Android.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/admin/Documents/work/Xamarin/smartdocs/Droid/obj/Debug/__library_projects__/ZXingNetMobile.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/admin/Documents/work/Xamarin/smartdocs/Droid/obj/Debug/__library_projects__/SignaturePad.Android.stamp</ResolvedResourceDirectoryStamp>
+  </ResolvedResourceDirectoryStamps>
+</Paths>

@@ -1,0 +1,24 @@
+﻿<Properties StartupConfiguration="{EBBEC3E6-2A6C-479C-B189-52B5DC07DE56}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Smartdocs/Pages/Invoice/InvoiceDetail/InvoiceDetailPage.cs">
+    <Files>
+      <File FileName="iOS/BarCodeScanner.cs" Line="1" Column="1" />
+      <File FileName="Smartdocs/Smartdocs.xaml.cs" Line="38" Column="51" />
+      <File FileName="iOS/AppDelegate.cs" Line="17" Column="18" />
+      <File FileName="Smartdocs/Pages/Inbox/InboxPage.xaml.cs" Line="65" Column="34" />
+      <File FileName="iOS/Main.cs" Line="17" Column="1" />
+      <File FileName="Smartdocs/Pages/Invoice/InvoiceItemTemplate.xaml.cs" Line="1" Column="1" />
+      <File FileName="Smartdocs/Pages/Invoice/InvoicePage.xaml.cs" Line="37" Column="37" />
+      <File FileName="Smartdocs/Pages/Invoice/InvoicePage.xaml" Line="31" Column="23" />
+      <File FileName="Smartdocs/Pages/_Partials/MainHeader.xaml" Line="1" Column="1" />
+      <File FileName="Smartdocs/Pages/Inbox/InboxPage.xaml" Line="20" Column="24" />
+      <File FileName="Smartdocs/Pages/Invoice/InvoiceDetail/InvoiceDetailPage.cs" Line="14" Column="23" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Smartdocs.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.9C8B2E4A-239C-403A-B5E8-393CA8CD0CD2" />
+</Properties>

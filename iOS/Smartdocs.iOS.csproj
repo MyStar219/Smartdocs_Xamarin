@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{EBBEC3E6-2A6C-479C-B189-52B5DC07DE56}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Smartdocs.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>Smartdocs.iOS</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>i386</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignProvision></CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <IpaPackageName>
+    </IpaPackageName>
+    <CodesignProvision>2aebb420-ff29-49c6-aefe-57a946b71234</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>i386</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <CodesignKey>iPhone Developer</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignKey>iPhone Distribution: SmartDocs Inc (BK6B2TG45D)</CodesignKey>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignProvision>0c493a96-e724-494c-8846-2542b544c3a9</CodesignProvision>
+    <IpaPackageName>
+    </IpaPackageName>
+    <BuildIpa>true</BuildIpa>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="Xamarin.Forms.Platform.iOS">
+      <HintPath>..\packages\Xamarin.Forms.1.3.5.6335\lib\Xamarin.iOS10\Xamarin.Forms.Platform.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core">
+      <HintPath>..\packages\Xamarin.Forms.1.3.5.6335\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml">
+      <HintPath>..\packages\Xamarin.Forms.1.3.5.6335\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.portable">
+      <HintPath>..\packages\ZXing.Net.Mobile.2.0.4.46\lib\Xamarin.iOS10\zxing.portable.dll</HintPath>
+    </Reference>
+    <Reference Include="ZXing.Net.Mobile.Core">
+      <HintPath>..\packages\ZXing.Net.Mobile.2.0.4.46\lib\Xamarin.iOS10\ZXing.Net.Mobile.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ZXingNetMobile">
+      <HintPath>..\packages\ZXing.Net.Mobile.2.0.4.46\lib\Xamarin.iOS10\ZXingNetMobile.dll</HintPath>
+    </Reference>
+    <Reference Include="SignaturePad.iOS, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\Components\signature-pad-1.3.8\lib\ios-unified\SignaturePad.iOS.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Smartdocs\Smartdocs.csproj">
+      <Project>{16D9E2AD-17E8-4369-9164-001B8C0E8AD4}</Project>
+      <Name>Smartdocs</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="BarCodeScanner.cs" />
+    <Compile Include="Renderers\CarouselLayoutRenderer.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Import Project="..\packages\Xamarin.Forms.1.3.5.6335\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.3.5.6335\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
+  <ItemGroup>
+    <BundleResource Include="Resources\Default-568h%402x.png" />
+    <BundleResource Include="Resources\Default%402x.png" />
+    <BundleResource Include="Resources\Icon.png" />
+    <BundleResource Include="Resources\Icon%402x.png" />
+    <BundleResource Include="Resources\Icon-60%402x.png" />
+    <BundleResource Include="Resources\Icon-72.png" />
+    <BundleResource Include="Resources\Icon-72%402x.png" />
+    <BundleResource Include="Resources\Icon-76.png" />
+    <BundleResource Include="Resources\Icon-76%402x.png" />
+    <BundleResource Include="..\assets\inbox.png">
+      <Link>Resources\inbox.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\assets\inbox%402x.png">
+      <Link>Resources\inbox%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\assets\invoice.png">
+      <Link>Resources\invoice.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\assets\invoices%402x.png">
+      <Link>Resources\invoices%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\assets\jpg64.png">
+      <Link>Resources\jpg64.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\assets\link.png">
+      <Link>Resources\link.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\assets\maintenance.png">
+      <Link>Resources\maintenance.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\assets\material64.png">
+      <Link>Resources\material64.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\assets\outbox.png">
+      <Link>Resources\outbox.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\assets\outbox%402x.png">
+      <Link>Resources\outbox%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\assets\payment.png">
+      <Link>Resources\payment.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\assets\pdf64.png">
+      <Link>Resources\pdf64.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\assets\photo_library64.png">
+      <Link>Resources\photo_library64.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\assets\price.png">
+      <Link>Resources\price.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\assets\purchase_order.png">
+      <Link>Resources\purchase_order.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\assets\purchase_request.png">
+      <Link>Resources\purchase_request.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\assets\request.png">
+      <Link>Resources\request.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\assets\requests.png">
+      <Link>Resources\requests.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\assets\requests%402x.png">
+      <Link>Resources\requests%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\assets\search.png">
+      <Link>Resources\search.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\assets\setting.png">
+      <Link>Resources\setting.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\assets\setting%402x.png">
+      <Link>Resources\setting%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\assets\time24.png">
+      <Link>Resources\time24.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\assets\toggle_menu.png">
+      <Link>Resources\toggle_menu.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\assets\lines.png">
+      <Link>Resources\lines.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\assets\logs.png">
+      <Link>Resources\logs.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\assets\main.png">
+      <Link>Resources\main.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\assets\pos.png">
+      <Link>Resources\pos.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\assets\prs.png">
+      <Link>Resources\prs.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\assets\more.png">
+      <Link>Resources\more.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\assets\act_files.png">
+      <Link>Resources\act_files.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\assets\act_lines.png">
+      <Link>Resources\act_lines.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\assets\act_logs.png">
+      <Link>Resources\act_logs.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\assets\act_main.png">
+      <Link>Resources\act_main.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\assets\files.png">
+      <Link>Resources\files.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\assets\approve.png">
+      <Link>Resources\approve.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\assets\deny.png">
+      <Link>Resources\deny.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\assets\download.png">
+      <Link>Resources\download.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\assets\Splash-white-320X480.png">
+      <Link>Resources\Splash-white-320X480.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\assets\Splash-white-640X960.png">
+      <Link>Resources\Splash-white-640X960.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\assets\Splash-white-640X1136.png">
+      <Link>Resources\Splash-white-640X1136.png</Link>
+    </BundleResource>
+    <BundleResource Include="Resources\Default.png" />
+    <BundleResource Include="..\assets\back.png">
+      <Link>Resources\back.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\assets\camera64.png">
+      <Link>Resources\camera64.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Renderers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="signature-pad">
+      <Version>1.3.8</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+  </ItemGroup>
+</Project>
